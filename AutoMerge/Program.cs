@@ -1,16 +1,20 @@
 ﻿using System;
+using AutoMerge.IO;
 
 namespace AutoMerge
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine(args[0]);
-            Console.WriteLine(args[1]);
-            Console.WriteLine(args[2]);
+            var source = FileService.ReadFile(args[0]);
+            var changeA = FileService.ReadFile(args[1]);
+            var changeB = FileService.ReadFile(args[2]);
 
+            foreach (string s in source)
+            {
+                Console.WriteLine(s);
+            }
         }
     }
 }
