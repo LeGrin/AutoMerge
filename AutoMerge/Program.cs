@@ -1,5 +1,6 @@
 ﻿using System;
 using AutoMerge.IO;
+using AutoMerge.Merger;
 
 namespace AutoMerge
 {
@@ -10,11 +11,8 @@ namespace AutoMerge
             var source = FileService.ReadFile(args[0]);
             var changeA = FileService.ReadFile(args[1]);
             var changeB = FileService.ReadFile(args[2]);
-
-            foreach (string s in source)
-            {
-                Console.WriteLine(s);
-            }
+            var result = MergeService.ThreeWayMerge(source, changeA, changeB);
+            FileService.WriteFile(result);
         }
     }
 }

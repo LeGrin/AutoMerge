@@ -1,0 +1,9 @@
+First Line
+Third Line Edit{
+    Sub-Third-Line 0.5
+    Sub-Third-Line 1
+-- Conflict A --    Sub-Third-Line 2.3
+-- Conflict B --    Sub-Third-Line 2.5
+}
+Fourth Line
+Last Line Edit

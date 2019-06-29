@@ -1,5 +1,5 @@
 First Line
-Second Line
+Second
 Third Line {
 	Sub-Third-Line 1
 	Sub-Third-Line 2
